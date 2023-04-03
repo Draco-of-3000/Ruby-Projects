@@ -25,4 +25,3 @@ def caesar_cipher (plaintext, key)
     return result
 end
 
-puts caesar_cipher("hello, world", 13)
