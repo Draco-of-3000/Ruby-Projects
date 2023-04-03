@@ -1,13 +1,16 @@
 def caesar_cipher (plaintext, key)
+    # Check if plaintext is Numeric
     if Numeric === plaintext 
         return plaintext
     end
 
+    #C heck if Key is valid (is an integer)
     if !key.to_s.match?(/\A\d+\z/)
         error = puts "INVALID KEY! Cannot Encrypt '#{plaintext}'. Key must be an integer. E.g '4', '50'"
         return error
     end
 
+    #Encrypt plaintext based on key
     result = ''
     for i in 0..(plaintext.length - 1)
         if plaintext[i].match?(/[a-z]/)
@@ -22,4 +25,4 @@ def caesar_cipher (plaintext, key)
     return result
 end
 
-puts caesar_cipher("I love Draco", 5.5)
+puts caesar_cipher("hello, world", 13)
