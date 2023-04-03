@@ -8,7 +8,7 @@ def substring (word, dictionary)
     
     dictionary.each do |input|
 
-        if word.include?(input)
+        if word.downcase.include?(input.downcase)
             substring_hash[input] += 1
         end
     end
