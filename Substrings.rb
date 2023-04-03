@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 
@@ -21,4 +19,3 @@ def substring (input, dictionary)
     
 end
 
-puts substring("Howdy partner, sit down! How's it going?", dictionary)
