@@ -3,10 +3,9 @@ def caesar_cipher (plaintext, key)
         return plaintext
     end
 
-    begin
-        Integer(key)
-    rescue ArgumentError
-        puts "Key must be an integer. E.g '4', '50'"
+    if !key.to_s.match?(/\A\d+\z/)
+        error = puts "INVALID KEY! Cannot Encrypt '#{plaintext}'. Key must be an integer. E.g '4', '50'"
+        return error
     end
 
     result = ''
@@ -23,4 +22,4 @@ def caesar_cipher (plaintext, key)
     return result
 end
 
-puts caesar_cipher("I love Draco", 5)
+puts caesar_cipher("I love Draco", 5.5)
