@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 def stock_picker (prices)
     min_price = prices[0]
     max_profit = 0
@@ -27,7 +25,3 @@ def stock_picker (prices)
 
     return result
 end
-
-# stock_prices = [17,3,6,9,15,8,6,1,10]
-
-puts stock_picker([17,3,6,9,15,8,6,1,10])
