@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 def Bubble_sort(array)
     # Set a flag to true indicating that the array is unsorted
     swapped = true
@@ -18,6 +16,5 @@ def Bubble_sort(array)
     end
     # Return the sorted array
     array
-  end  
+end  
 
-puts Bubble_sort([4,3,78,2,0,2])
