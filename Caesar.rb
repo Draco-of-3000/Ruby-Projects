@@ -1,4 +1,6 @@
 class Caesar
+    attr_reader :plaintext, :name
+    
     def initialize(plaintext, key)
         @plaintext = plaintext
         @key = key
@@ -12,7 +14,8 @@ class Caesar
         end
     end
       
-        #Encrypt plaintext based on key
+    #Encrypt plaintext based on key
+    def encrypt
         result = ''
         for i in 0..(plaintext.length - 1)
             if plaintext[i].match?(/[a-z]/)
@@ -27,3 +30,7 @@ class Caesar
         return result
     end
 end
+
+cypher = Caesar.new("I love you", 5)
+cypher.key_is_valid?
+cypher.encrypt
