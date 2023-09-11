@@ -4,11 +4,13 @@ class Caesar
         @key = key
     end
       
-        # Check if Key is valid (is an integer)
-        if !key.to_s.match?(/\A\d+\z/)
+    # Check if Key is valid (is an integer)
+    def key_is_valid?
+        if !@key.to_s.match?(/\A\d+\z/)
             error = puts "INVALID KEY! Cannot Encrypt '#{plaintext}'. Key must be an integer. E.g '4', '50'"
             return error
         end
+    end
       
         #Encrypt plaintext based on key
         result = ''
