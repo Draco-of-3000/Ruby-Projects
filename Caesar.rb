@@ -27,7 +27,7 @@ class Caesar
             end
         end
       
-        return result
+        puts result
     end
 end
 
