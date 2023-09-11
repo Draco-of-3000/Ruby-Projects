@@ -30,6 +30,7 @@ class Caesar
         end
       
         puts result
+        return result
     end
 end
 
