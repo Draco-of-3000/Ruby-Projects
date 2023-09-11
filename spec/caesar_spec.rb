@@ -12,4 +12,21 @@ describe Caesar do
             expect(caesar.key_is_valid?).to be(false)
         end
     end
+
+    describe "#encrypt" do 
+        it "encrypts lowercase letter correctly" do 
+            caesar = Caesar.new("abc", 1)
+            expect(caesar.encrypt).to eq("bcd")
+        end
+
+        it "encrypts uppercase letter correctly" do 
+            caesar = Caesar.new("ABC", 1)
+            expect(caesar.encrypt).to eq("BCD")
+        end
+
+        it "leaves non-alphabet characters unchanged" do
+            caesar = Caesar.new("Hello, World!", 1)
+            expect(caesar.encrypt).to eq("Ifmmp, Xpsme!")
+        end
+    end
 end
