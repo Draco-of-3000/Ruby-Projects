@@ -10,7 +10,7 @@ class Caesar
     def key_is_valid?
         if !@key.to_s.match?(/\A\d+\z/)
             error = puts "INVALID KEY! Cannot Encrypt '#{plaintext}'. Key must be an integer. E.g '4', '50'"
-            return error
+            puts error
         end
     end
       
