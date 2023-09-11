@@ -1,7 +1,7 @@
 require "./lib/Caesar"
 
 describe Caesar do
-    describe "#key_is_valid?" do
+    context "is the key valid?" do
         it "returns true if the key is a valid integer" do 
             caesar = Caesar.new("text", 4)
             expect(caesar.key_is_valid?).to be(true)
@@ -13,7 +13,7 @@ describe Caesar do
         end
     end
 
-    describe "#encrypt" do 
+    context "encrypt text" do 
         it "encrypts lowercase letter correctly" do 
             caesar = Caesar.new("abc", 1)
             expect(caesar.encrypt).to eq("bcd")
