@@ -1,6 +1,6 @@
 class Caesar
-    attr_reader :plaintext, :name
-    
+    attr_reader :plaintext, :key
+
     def initialize(plaintext, key)
         @plaintext = plaintext
         @key = key
